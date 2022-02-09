@@ -10,3 +10,11 @@ def direction(facing, turn):
     else: 
         z = y % 8
         return(facinglist[z])
+    
+    2 вариант: 
+    def direction(facing, turn):
+    facinglist = ['N','NE','E','SE','S','SW','W','NW']
+    x = int(turn//45)
+    facingindex = facinglist.index(facing)
+    y = facingindex + x
+    return facinglist[y % 8]
